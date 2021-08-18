@@ -1,4 +1,4 @@
-# [Links](https://rohandas.me/Links)
+# [Links](https://rohandas.me/links)
 
 A Beautiful Jekyll Theme For Links
 
