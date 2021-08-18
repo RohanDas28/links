@@ -169,12 +169,12 @@ links:
   #   Color: '#ff2865'
   #   Text_Color: '#ffffff'
 
-     # SPOTIFY
-   - Name: Spotify
-     URL: http://open.spotify.com/user
-     Username: 4ml7csjrki8w0sh4x2ngvlwou
-     Color: '#1DB954'
-     Icon-Class: fab fa-spotify
+  #   # SPOTIFY
+  # - Name: Spotify
+  #   URL: http://open.spotify.com/user
+  #   Username: 314ihryk3edvtusti6il3oy3x5da
+  #   Color: '#1DB954'
+  #   Icon-Class: fab fa-spotify
 
   #   # SOUNDCLOUD
   # - Name: SoundCloud
