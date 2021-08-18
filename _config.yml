@@ -125,12 +125,12 @@ links:
     Icon-Class: fab fa-snapchat-ghost
 
   #   # DISCORD
-   - Name: Discord
-     URL: 'https://discord.gg'
-     Username: RohanDas#3711 
-     Icon-Class: fab fa-discord
-     Color: '#5865F2'
-     Text_Color: '#ffffff'
+   #- Name: Discord
+    # URL: 'https://discord.gg'
+    # Username: RohanDas#3711 
+    # Icon-Class: fab fa-discord
+    # Color: '#5865F2'
+    # Text_Color: '#ffffff'
 
     # PINTEREST
   # - Name: Pinterest
