@@ -53,7 +53,7 @@ links:
 
     # YOUTUBE
   - Name: YouTube
-    URL: https://www.youtube.com/channel
+    URL: https://www.youtube.com/c
     Username: rohandastech
     Color: '#ff0000'
     Icon-Class: fab fa-youtube
@@ -75,7 +75,7 @@ links:
     # TWITCH
   - Name: Twitch
     URL: 'https://twitch.tv'
-    Username: harsh98trivedi
+    Username: thecorvus28
     Icon-Class: fab fa-twitch
     Color: '#9147fe'
     Text_Color: '#ffffff'
