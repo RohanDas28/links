@@ -2,7 +2,7 @@
 name: Rohan Das
 
 # YOUR BRAND/PERSONAL TAGLINE
-tagline: Hello, this is Rohan here. I am a passionate passionate coder who loves to imagine things.
+tagline: Hello, I'm Rohan. I'm a passionate passionate coder who loves to imagine things.
 
 # YOUR/BRAND IMAGE URL
 # Image_URL: https://www.gravatar.com/avatar/0d73468bd0b0258eb61d9358352ecb7b?s=500
@@ -125,12 +125,12 @@ links:
     Icon-Class: fab fa-snapchat-ghost
 
   #   # DISCORD
-   #- Name: Discord
-    # URL: 'https://discord.gg'
-    # Username: RohanDas#3711 
-    # Icon-Class: fab fa-discord
-    # Color: '#5865F2'
-    # Text_Color: '#ffffff'
+  # - Name: Discord
+  #   URL: 'https://discord.gg'
+  #   Username: 
+  #   Icon-Class: fab fa-discord
+  #   Color: '#5865F2'
+  #   Text_Color: '#ffffff'
 
     # PINTEREST
   # - Name: Pinterest
