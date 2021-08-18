@@ -1,10 +1,10 @@
-# [Links](https://github.com/harsh98trivedi/Links)
+# [Links](https://rohandas.me/Links)
 
 A Beautiful Jekyll Theme For Links
 
 ![Links](/assets/images/links.jpg)
 
-#### Checkout the [Demo Here](https://harsh98trivedi.github.io/links)
+#### Checkout the [Demo Here](https://rohandas28.github.io/links)
 <br>
 <a href="https://vimeo.com/587253271"><img src="https://i.imgur.com/s7vdI7T.png"/></a>
 
