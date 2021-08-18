@@ -15,58 +15,58 @@ links:
 
   # IF YOU DON'T WANT TO USE ANY OF THE FOLLOWING, JUST LEAVE THE URL BLANK
     
-    # FACEBOOK
-  - Name: Facebook
-    URL: https://www.facebook.com
-    Username: harsh98trivedi
-    Color: '#3b5998'
-    Icon-Class: fab fa-facebook
+  #   # FACEBOOK
+  # - Name: Facebook
+  #   URL: https://www.facebook.com
+  #   Username: harsh98trivedi
+  #   Color: '#3b5998'
+  #   Icon-Class: fab fa-facebook
 
     # INSTAGRAM
   - Name: Instagram
     URL: https://www.instagram.com
-    Username: harsh98trivedi
+    Username: rohandasrd
     Color: '#DD2A7B'
     Icon-Class: fab fa-instagram
 
     # TWITTER
   - Name: Twitter
     URL: https://twitter.com
-    Username: harsh98trivedi
+    Username: rohandas28
     Color: '#1DA1F2'
     Icon-Class: fab fa-twitter
 
     # CLUBHOUSE
   - Name: Clubhouse
     URL: https://www.clubhouse.com
-    Username: '@harsh98trivedi'
+    Username: '@rohandas28'
     Color: '#f1c40f'
     Icon-Class: fas fa-hand-paper -mt-0.5
     
     # LINKEDIN
   - Name: LinkedIn
     URL: https://www.linkedin.com/in
-    Username: harsh98trivedi
+    Username: rohandas28
     Color: '#2867B2'
     Icon-Class: fab fa-linkedin-in
 
     # YOUTUBE
   - Name: YouTube
     URL: https://www.youtube.com/channel
-    Username: UCS3zvA_2r1iGT7MB3NVCGAw
+    Username: rohandastech
     Color: '#ff0000'
     Icon-Class: fab fa-youtube
 
     # GITHUB
   - Name: GitHub
     URL: http://github.com
-    Username: harsh98trivedi
+    Username: rohandas28
     Color: '#6e5494'
     Icon-Class: fab fa-github
 
     # EMAIL
   - Name: Email
-    URL: 'mailto:harsh98trivedi@rediffmail.com'
+    URL: 'mailto:rohandasbirbhum@gmail.com'
     Icon-Class: fas fa-envelope
     Color: '#e17055'
     Text_Color: '#ffffff'
@@ -79,25 +79,25 @@ links:
     Color: '#9147fe'
     Text_Color: '#ffffff'
 
-    # VIMEO
-  - Name: Vimeo
-    URL: 'https://vimeo.com'
-    Username: harshtrivedi
-    Icon-Class: fab fa-vimeo-v
-    Color: '#1ab7ea'
-    Text_Color: '#ffffff'
+  #   # VIMEO
+  # - Name: Vimeo
+  #   URL: 'https://vimeo.com'
+  #   Username: harshtrivedi
+  #   Icon-Class: fab fa-vimeo-v
+  #   Color: '#1ab7ea'
+  #   Text_Color: '#ffffff'
 
-    # MESSENGER
-  - Name: Messenger
-    URL: https://m.me
-    Username: theharshtrivedi
-    Color: '#006AFF'
-    Icon-Class: fab fa-facebook-messenger
+  #   # MESSENGER
+  # - Name: Messenger
+  #   URL: https://m.me
+  #   Username: theharshtrivedi
+  #   Color: '#006AFF'
+  #   Icon-Class: fab fa-facebook-messenger
 
     # REDDIT
   - Name: Reddit
     URL: http://reddit.com/u
-    Username: harshtrivedi
+    Username: rohandas28
     Color: '#FF4500'
     Icon-Class: fab fa-reddit-alien
 
@@ -111,14 +111,14 @@ links:
     # TELEGRAM
   - Name: Telegram
     URL: http://telegram.me
-    Username: theharshtrivedi
+    Username: rohandas28
     Color: '#0088cc'
     Icon-Class: fab fa-telegram-plane
 
     # SNAPCHAT
   - Name: Snapchat
     URL: https://www.snapchat.com/add
-    Username: 'harsh98trivedi'
+    Username: 'rohandas_28'
     Color: '#FFFC00'
     Text_Color: '#000000'
     Icon-Class: fab fa-snapchat-ghost
@@ -132,18 +132,18 @@ links:
   #   Text_Color: '#ffffff'
 
     # PINTEREST
-  - Name: Pinterest
-    URL: https://pinterest.com
-    Username: 'harsh98trivedi'
-    Color: '#E60023'
-    Icon-Class: fab fa-pinterest
+  # - Name: Pinterest
+  #   URL: https://pinterest.com
+  #   Username: 'harsh98trivedi'
+  #   Color: '#E60023'
+  #   Icon-Class: fab fa-pinterest
 
     # BEHANCE
-  - Name: Behance
-    URL: https://www.behance.net
-    Username: harsh98trivedi
-    Color: '#1769ff'
-    Icon-Class: fab fa-behance
+  # - Name: Behance
+  #   URL: https://www.behance.net
+  #   Username: harsh98trivedi
+  #   Color: '#1769ff'
+  #   Icon-Class: fab fa-behance
 
   #   # DRIBBBLE
   # - Name: Dribbble
@@ -153,34 +153,34 @@ links:
   #   Icon-Class: fab fa-dribbble
 
     # DEVIANTART
-  - Name: DeviantArt
-    URL: https://www.deviantart.com
-    Username: harshtrivedi
-    Icon-Class: fab fa-deviantart
-    Color: '#05CC46'
-    Text_Color: '#ffffff'
+  # - Name: DeviantArt
+  #   URL: https://www.deviantart.com
+  #   Username: harshtrivedi
+  #   Icon-Class: fab fa-deviantart
+  #   Color: '#05CC46'
+  #   Text_Color: '#ffffff'
 
-    # FIGMA
-  - Name: Figma
-    URL: https://www.figma.com
-    Username: '@harshtrivedi'
-    Icon-Class: fab fa-figma
-    Color: '#ff2865'
-    Text_Color: '#ffffff'
+  #   # FIGMA
+  # - Name: Figma
+  #   URL: https://www.figma.com
+  #   Username: '@harshtrivedi'
+  #   Icon-Class: fab fa-figma
+  #   Color: '#ff2865'
+  #   Text_Color: '#ffffff'
 
-    # SPOTIFY
-  - Name: Spotify
-    URL: http://open.spotify.com/user
-    Username: 314ihryk3edvtusti6il3oy3x5da
-    Color: '#1DB954'
-    Icon-Class: fab fa-spotify
+  #   # SPOTIFY
+  # - Name: Spotify
+  #   URL: http://open.spotify.com/user
+  #   Username: 314ihryk3edvtusti6il3oy3x5da
+  #   Color: '#1DB954'
+  #   Icon-Class: fab fa-spotify
 
-    # SOUNDCLOUD
-  - Name: SoundCloud
-    URL: https://www.soundcloud.com
-    Username: harsh98trivedi
-    Color: '#FE5000'
-    Icon-Class: fab fa-soundcloud
+  #   # SOUNDCLOUD
+  # - Name: SoundCloud
+  #   URL: https://www.soundcloud.com
+  #   Username: harsh98trivedi
+  #   Color: '#FE5000'
+  #   Icon-Class: fab fa-soundcloud
 
   #    # TIKTOK
   # - Name: TikTok
@@ -189,18 +189,18 @@ links:
   #   Color: '#FE2C55'
   #   Icon-Class: fab fa-tiktok
 
-    # MEDIUM
-  - Name: Medium
-    URL: 'https://medium.com'
-    Username: '@harsh98trivedi'
-    Icon-Class: fab fa-medium-m
-    Color: '#00ab6c'
-    Text_Color: '#ffffff'
+  #   # MEDIUM
+  # - Name: Medium
+  #   URL: 'https://medium.com'
+  #   Username: '@harsh98trivedi'
+  #   Icon-Class: fab fa-medium-m
+  #   Color: '#00ab6c'
+  #   Text_Color: '#ffffff'
 
     # DEV.TO
   - Name: Dev.to
     URL: 'https://dev.to'
-    Username: harsh98trivedi
+    Username: rohandas28
     Icon-Class: fab fa-dev
     Color: '#ffffff'
     Text_Color: '#000000'
@@ -214,13 +214,13 @@ links:
 
     # CUSTOM LINK
   - Name: Blog
-    URL: https://harsh98trivedi.github.io/blog
+    URL: https://rohandas28.github.io/blog
     Icon-Class: fas fa-link
     Color: '#ffb142'
     Text_Color: '#ffffff'
 
   - Name: Links
-    URL: https://github.com/harsh98trivedi/links
+    URL: https://github.com/rohandas28/links
     Icon-Class: fas fa-link
     Color: '#d94869'
     Text_Color: '#ffffff'
