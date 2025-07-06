@@ -1,5 +1,5 @@
 # .github/workflows/ci.yml
-name: Node CI (pnpm + GitHub Pages)
+name: Vite CI + GitHub Pages (pnpm)
 
 on:
   push:
@@ -13,7 +13,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [20.x] # Only build once on stable Node LTS
+        node-version: [20.x]  # Build once using Node 20.x (LTS)
 
     steps:
       - name: Checkout repository
@@ -24,16 +24,19 @@ jobs:
         with:
           version: 10
 
-      - name: Set up Node.js ${{ matrix.node-version }}
+      - name: Setup Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
-          cache: 'pnpm'
+          cache: pnpm
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Build (Vite)
+      - name: Clean previous build
+        run: rm -rf dist
+
+      - name: Build with Vite
         run: CI=true pnpm run build
 
       - name: Upload GitHub Pages artifact
@@ -41,6 +44,7 @@ jobs:
         with:
           name: github-pages
           path: dist/
+          if-no-files-found: error  # Ensures empty builds fail
 
   deploy:
     needs: build
