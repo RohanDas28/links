@@ -1,0 +1,75 @@
+# .github/workflows/ci.yml
+name: Node CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test-build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      # You only need one OS; add windows-latest / macos-latest
+      # if you actually ship OS‑specific code.
+      matrix:
+        node-version: [18.x, 20.x, 22.x]
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Node ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'        # restores ~/.npm, saves on exit by default
+
+      - name: Install deps
+        run: npm ci
+
+      - name: Lint (eslint)
+        run: npm run lint --if-present
+
+      - name: Unit tests
+        run: npm test --if-present
+
+      - name: Build (Vite)
+        # Vite uses NODE_ENV=production automatically; CI=1 keeps logs terse
+        run: CI=true npm run build
+
+      # Save the build output just once (20.x run) to keep the matrix fast.
+      - name: Upload dist artifact
+        if: matrix.node-version == '20.x'
+        uses: actions/upload-artifact@v4
+        with:
+          name: dist
+          path: dist/
+
+  # ---------- OPTIONAL: auto‑deploy to GitHub Pages ----------
+  deploy:
+    needs: test-build
+    if: >
+      github.ref == 'refs/heads/main' &&
+      github.event_name == 'push'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read     # to fetch the repo
+      pages: write       # to push to gh‑pages
+      id-token: write    # to sign the deployment
+
+    steps:
+      - name: Download dist artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: dist
+          path: ./dist
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v4
+        with:
+          static_site_generator: vite   # only for nicer logs
+
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v4
