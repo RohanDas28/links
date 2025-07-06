@@ -48,21 +48,20 @@ const getIcon = (iconType: string) => {
 };
 
 const Index = () => {
-  const [isDark, setIsDark] = useState(false);
+  const [isDark, setIsDark] = useState(() => {
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+      return savedTheme === 'dark';
+    }
+    return true; // Default to dark mode
+  });
 
   useEffect(() => {
     // Hide default cursor
     document.body.style.cursor = 'none';
     document.documentElement.style.cursor = 'none';
     
-    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-    setIsDark(mediaQuery.matches);
-
-    const handler = (e: MediaQueryListEvent) => setIsDark(e.matches);
-    mediaQuery.addEventListener('change', handler);
-    
     return () => {
-      mediaQuery.removeEventListener('change', handler);
       // Restore default cursor on cleanup
       document.body.style.cursor = 'auto';
       document.documentElement.style.cursor = 'auto';
@@ -72,8 +71,10 @@ const Index = () => {
   useEffect(() => {
     if (isDark) {
       document.documentElement.classList.add('dark');
+      localStorage.setItem('theme', 'dark');
     } else {
       document.documentElement.classList.remove('dark');
+      localStorage.setItem('theme', 'light');
     }
   }, [isDark]);
 
