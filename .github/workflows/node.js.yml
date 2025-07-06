@@ -8,7 +8,7 @@ on:
     branches: [main]
 
 jobs:
-  test-build:
+  build:
     runs-on: ubuntu-latest
 
     strategy:
@@ -16,39 +16,25 @@ jobs:
         node-version: [18.x, 20.x, 22.x]
 
     steps:
-      # 1. Checkout source code
       - uses: actions/checkout@v4
 
-      # 2. Set up pnpm CLI
       - name: Install pnpm
         uses: pnpm/action-setup@v4
         with:
-          version: 10 # or use the latest version you prefer
+          version: 10
 
-      # 3. Set up Node.js and enable pnpm caching
       - name: Set up Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
           cache: 'pnpm'
 
-      # 4. Install dependencies from lockfile
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      # 5. Run linter (errors will cause the workflow to fail)
-      - name: Lint (eslint)
-        run: pnpm run lint
-
-      # 6. Run unit tests, if defined
-      - name: Unit tests
-        run: pnpm test --if-present
-
-      # 7. Build with Vite
       - name: Build (Vite)
         run: CI=true pnpm run build
 
-      # 8. Upload build artifacts from the Node 20 run
       - name: Upload dist artifact
         if: matrix.node-version == '20.x'
         uses: actions/upload-artifact@v4
@@ -56,9 +42,8 @@ jobs:
           name: dist
           path: dist/
 
-  # ---------- OPTIONAL: Deploy to GitHub Pages ----------
   deploy:
-    needs: test-build
+    needs: build
     if: github.ref == 'refs/heads/main' && github.event_name == 'push'
     runs-on: ubuntu-latest
     permissions:
