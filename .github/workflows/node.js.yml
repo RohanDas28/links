@@ -1,5 +1,5 @@
 # .github/workflows/ci.yml
-name: Node CI (pnpm)
+name: Node CI (pnpm)
 
 on:
   push:
@@ -16,37 +16,39 @@ jobs:
         node-version: [18.x, 20.x, 22.x]
 
     steps:
-      # 1 ⟶ check out the code
+      # 1. Checkout source code
       - uses: actions/checkout@v4
 
-      # 2 ⟶ install the pnpm CLI once per job (fast: ~200 ms)
+      # 2. Set up pnpm CLI
       - name: Install pnpm
         uses: pnpm/action-setup@v4
         with:
-          version: 10          # any exact/semver range works
+          version: 10 # or use the latest version you prefer
 
-      # 3 ⟶ set up Node and enable built‑in pnpm cache
-      - name: Use Node.js ${{ matrix.node-version }}
+      # 3. Set up Node.js and enable pnpm caching
+      - name: Set up Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
-          cache: pnpm          # hashes pnpm‑lock.yaml for you
+          cache: 'pnpm'
 
-      # 4 ⟶ install dependencies reproducibly
-      - name: Install deps
+      # 4. Install dependencies from lockfile
+      - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      # 5 ⟶ quality gates
+      # 5. Run linter (errors will cause the workflow to fail)
       - name: Lint (eslint)
-        run: pnpm run lint --if-present
+        run: pnpm run lint
+
+      # 6. Run unit tests, if defined
       - name: Unit tests
         run: pnpm test --if-present
 
-      # 6 ⟶ build your Vite app
+      # 7. Build with Vite
       - name: Build (Vite)
         run: CI=true pnpm run build
 
-      # 7 ⟶ store build output once (from Node 20)
+      # 8. Upload build artifacts from the Node 20 run
       - name: Upload dist artifact
         if: matrix.node-version == '20.x'
         uses: actions/upload-artifact@v4
@@ -54,7 +56,7 @@ jobs:
           name: dist
           path: dist/
 
-  # ---------- OPTIONAL: auto‑deploy to GitHub Pages ----------
+  # ---------- OPTIONAL: Deploy to GitHub Pages ----------
   deploy:
     needs: test-build
     if: github.ref == 'refs/heads/main' && github.event_name == 'push'
@@ -71,10 +73,10 @@ jobs:
           name: dist
           path: ./dist
 
-      - name: Configure Pages
+      - name: Configure GitHub Pages
         uses: actions/configure-pages@v4
         with:
           static_site_generator: vite
 
-      - name: Deploy to GitHub Pages
+      - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
